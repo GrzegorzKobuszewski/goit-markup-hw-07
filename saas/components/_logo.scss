@@ -1,0 +1,27 @@
+/* ========== LOGO ========== */
+
+.logo-header,
+.logo-footer {
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.192;
+    letter-spacing: 0.03em;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.logo-header-color-1,
+.logo-footer-color-1 {
+    color: var(--hover-color);
+}
+
+.logo-header-color-2 {
+    color: #000000;
+}
+
+.logo-footer-color-2 {
+    color: var(--text-color-white);
+}
+
+/* ========== END LOGO ========== */

@@ -1,0 +1,49 @@
+/* ========== ABOUT US SECTION ========== */
+
+.about-us-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.about-us-item {
+    margin-top: 50px;
+    max-width: 370px;
+}
+
+.about-us-list-link-thumb {
+    position: relative;
+    background-color: rgba(47, 48, 58, 0.8);
+}
+
+.about-us-list-link-thumb>.about-us-list-link-label {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 27px 90px;
+    background-color: rgba(47, 48, 58, 0.8);
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.172;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--text-color-white);
+}
+
+.section-about-us-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.167;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+}
+
+.about-us-item-img {
+    object-fit: cover;
+}
+
+/* ========== END ABOUT US SECTION ========== */
