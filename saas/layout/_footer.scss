@@ -12,25 +12,25 @@
 }
 
 .adress-list {
+    @extend .list;
     display: flex;
     flex-direction: column;
     justify-items: center;
+    
+    &__item {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.714;
+        letter-spacing: 0.03em;
+    }
 }
 
-.adress-list-item {
-    display: flex;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.714;
-    letter-spacing: 0.03em;
-}
-
-.adress-map {
+.adress_map {
     color: var(--text-color-white);
 }
 
-.adress-mail,
-.adress-tel {
+.adress_mail,
+.adress_tel {
     display: block;
     color: rgba(255, 255, 255, 0.6);
     padding-top: 9px;
@@ -47,7 +47,7 @@
     color: var(--backgroung-color-menu)
 }
 
-.adress-link {
+.adress__link {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,
