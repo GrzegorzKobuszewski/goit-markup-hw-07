@@ -7,11 +7,6 @@
     background-color: var(--background-color-footer);
 }
 
-.footer .container {
-    display: flex;
-    align-items: baseline;
-}
-
 .adress {
     margin-top: 20px;
 }
@@ -41,12 +36,6 @@
     padding-top: 9px;
 }
 
-.footer-social-media {
-    display: flex;
-    flex-direction: column;
-    margin-left: 70px;
-}
-
 .call-to-action {
     display: flex;
     font-weight: 700;
@@ -58,45 +47,14 @@
     color: var(--backgroung-color-menu)
 }
 
-.footer-social-media-list {
-    display: flex;
-}
-
-.footer-social-media-list-link:hover,
-.footer-social-media-list-link:focus {
-    background-color: var(--social-media-background-color-hover);
-}
-
-.footer-social-media-list-item:not(:last-child) {
-    margin-right: 10px;
-}
-
-.footer-social-media-list-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    fill: var(--social-media-icon-color-hover);
-    background-color: rgba(255, 255, 255, 0.1);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer-social-media-icon {
-    width: 20px;
-    height: 20px;
-}
-
-.adress-link:hover,
-.adress-link:focus {
-    color: var(--hover-color);
-}
-
 .adress-link {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
+    &:hover,
+    &:focus {
+        color: var(--hover-color);
+    }
+}
 
 .footer-newsletter {
     display: flex;
@@ -132,37 +90,12 @@
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     background-color: var(--background-color-footer);
-}
 
-.footer-newsletter-input:hover,
-.footer-newsletter-input:focus {
-    color: var(--text-color-white);
-    cursor: pointer;
-}
-
-.sign-up-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 12px;
-    width: 200px;
-    height: 50px;
-    background-color: var(--hover-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    color: var(--backgroung-color-menu);
-    border-style: none;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.875px;
-    letter-spacing: 0.03em;
-    padding-left: 42px;
-}
-
-.sign-up-button-icon {
-    margin-left: 24px;
-    margin-right: 28px;
-    fill: var(--backgroung-color-section)
+    &:hover,
+    &:focus {
+        color: var(--text-color-white);
+        cursor: pointer;
+    }
 }
 
 /* ========== END FOOTER ========== */

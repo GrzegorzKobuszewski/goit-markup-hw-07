@@ -1,27 +1,26 @@
 /* ========== LOGO ========== */
 
-.logo-header,
-.logo-footer {
+.logo {
     font-family: var(--secondary-font);
     font-weight: 700;
     font-size: 26px;
     line-height: 1.192;
     letter-spacing: 0.03em;
-    color: var(--main-color);
-    text-decoration: none;
-}
-
-.logo-header-color-1,
-.logo-footer-color-1 {
     color: var(--hover-color);
-}
+    text-decoration: none;
+        
+    &__header {
+        margin-right: 93px;
+    }
 
-.logo-header-color-2 {
-    color: #000000;
-}
+    &_light-theme {
+        color: var(--text-color-black);
+    }
 
-.logo-footer-color-2 {
-    color: var(--text-color-white);
+    &_dark-theme {
+        color: var(--text-color-white);
+    }
+
 }
 
 /* ========== END LOGO ========== */

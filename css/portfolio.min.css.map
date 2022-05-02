@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "../saas/portfolio.scss"
-    ],
-    "names": [],
-    "file": "portfolio.min.css"
-}

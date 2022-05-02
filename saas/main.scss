@@ -1,5 +1,4 @@
 @import 'utils/variables';
-@import 'utils/visually-hidden';
 
 @import 'base/common';
 @import 'base/container';
@@ -9,6 +8,10 @@
 @import 'components/modal';
 @import 'components/button';
 @import 'components/logo';
+@import 'components/list';
+@import 'components/list-contact';
+@import 'components/list-navigation';
+@import 'components/section-title';
 @import 'components/social-media-links';
 
 @import 'layout/header';

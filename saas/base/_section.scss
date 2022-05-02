@@ -8,3 +8,12 @@
 .section-only-top {
     padding-top: 94px;
 }
+
+.header, .section-hero, .section-about-us, .section-our-team, 
+.section-our-clients {
+    @extend .section;
+}
+
+.section-discription {
+    @extend .section-only-top;
+}

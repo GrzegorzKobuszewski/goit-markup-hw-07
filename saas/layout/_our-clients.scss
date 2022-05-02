@@ -5,15 +5,8 @@
     justify-content: center;
 }
 
-.section-our-clients-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.167;
-    text-align: center;
-    letter-spacing: 0.03em;
-}
-
 .section-our-clients-list {
+    @extend .list;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,7 +14,7 @@
     margin-top: 50px;
 }
 
-.section-our-clients-list-link {
+.section-our-clients__link {
     display: flex;
     max-width: 170px;
     max-height: 92px;
@@ -31,12 +24,12 @@
     fill: var(--social-media-icon-color);
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.section-our-clients-list-link:hover,
-.section-our-clients-list-link:focus {
-    border: 1px solid var(--hover-color);
-    fill: var(--hover-color);
+    &:hover,
+    &:focus {
+        border: 1px solid var(--hover-color);
+        fill: var(--hover-color);
+    }
 }
 
 /* ========== END CLIENTS SECTION ========== */

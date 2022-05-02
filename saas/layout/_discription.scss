@@ -1,31 +1,32 @@
 /* ========== DISCRIPTION SECTION ========== */
 
 .discription-list {
+    @extend .list;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 15px;
 }
 
-.discription-list-item {
+.discription-list__item {
     max-width: 270px;
 }
 
-.discription-icon {
+.discription-list__icon {
     width: 270px;
     height: 120px;
     border-radius: 4px;
     padding: 25px 100px;
     margin-bottom: 30px;
     background-color: var(--backgroung-color-section);
-}
 
-.discription-icon:hover {
+    &:hover {
     padding: 23px 98px;
     border: 2px solid var(--hover-color);
+    }
 }
 
-.discription-list-item-title {
+.discription-list__item_title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.143;
@@ -34,7 +35,7 @@
     color: var(--main-color);
 }
 
-.discription-list-item-p {
+.discription-list__item_p {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.714;
