@@ -1,11 +1,12 @@
 /* ========== WEBSITE: PORTFOLIO ========== */
-/* ========== SECTION CATEGORIES ========== */
+/* ========== SECTION CATEGORIES + PICTURES ========== */
 
 .menu {
     margin-bottom: 26px;
 }
 
 .categories-list {
+    @extend .list;
     display: flex;
     justify-content: center;
 }
@@ -15,58 +16,59 @@
 }
 
 .categories-pictures-list {
+    @extend .list;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
 
-.categories-pictures-item {
-    border: 0px solid #eeeeee;
-    margin-top: 30px;
-    max-width: 370px;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &__item {
+        border: 0px solid #eeeeee;
+        margin-top: 30px;
+        max-width: 370px;
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    &:hover,
-    &:focus {
-    box-shadow:
-        0px 1px 1px rgba(0, 0, 0, 0.12),
-        0px 4px 4px rgba(0, 0, 0, 0.06),
-        1px 4px 6px rgba(0, 0, 0, 0.16);
+        &:hover,
+        &:focus {
+        box-shadow:
+            0px 1px 1px rgba(0, 0, 0, 0.12),
+            0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+        }
     }
-}
 
-.categories-pictures-img {
-    border: 0px solid #eeeeee;
-}
+    &__box {
+        position: relative;
+        overflow: hidden;
+    }
 
-.categories-discription {
-    border: 1px solid #eeeeee;
-    border-top: 0px solid #eeeeee;
-}
+    &__img {
+        border: 0px solid #eeeeee;
+    }
 
-.categories-pictures-name {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-    padding-left: 24px;
-    padding-top: 20px;
-}
+    &__discription {
+        border: 1px solid #eeeeee;
+        border-top: 0px solid #eeeeee;
 
-.categories-pictures-p {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.875;
-    letter-spacing: 0.03em;
-    padding-left: 24px;
-    margin-top: 4px;
-    margin-bottom: 20px;
-    color: var(--text-color-grey)
-}
+        &_name {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 2;
+            letter-spacing: 0.06em;
+            padding-left: 24px;
+            padding-top: 20px;
+        }
 
-.categories-pictures-box {
-    position: relative;
-    overflow: hidden;
+        &_p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.875;
+            letter-spacing: 0.03em;
+            padding-left: 24px;
+            margin-top: 4px;
+            margin-bottom: 20px;
+            color: var(--text-color-grey)
+        }
+    }
 }
 
 .categories-pictures-overlay {
@@ -81,22 +83,22 @@
     transition-property: transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &_p {
+        font-size: 18px;
+        line-height: 1.556;
+        color: var(--text-color-white);
+    }
 }
 
-.categories-pictures-item .categories-pictures-overlay {
+.categories-pictures-list__item .categories-pictures-overlay {
     transition-property: transform;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.categories-pictures-box:hover .categories-pictures-overlay {
+.categories-pictures-list__box:hover .categories-pictures-overlay {
     transform: translateY(0);
-}
-
-.categories-pictures-overlay-p {
-    font-size: 18px;
-    line-height: 1.556;
-    color: var(--text-color-white);
 }
 
 /* ========== END CATEGORIES SECTION ========== */

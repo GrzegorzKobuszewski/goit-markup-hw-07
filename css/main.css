@@ -53,11 +53,11 @@ img {
   display: block;
 }
 
-.list, .navigation-list, .social-media-list, .footer-social-media-list, .section-hero_list, .discription-list, .about-us__list, .section-our-team__list, .section-our-clients-list, .adress-list {
+.list, .contact-list, .navigation-list, .social-media-list, .footer-social-media-list, .section-hero_list, .discription-list, .about-us__list, .section-our-team__list, .section-our-clients-list, .address-list, .categories-list, .categories-pictures-list {
   list-style: none;
 }
 
-.link, .navigation-list__link, .social-media-list_link, .footer-social-media-list__link, .about-us__link {
+.link, .navigation-list__link, .social-media-list_link, .footer-social-media-list__link, .about-us__link, .address-list__link {
   text-decoration: none;
   font-style: normal;
 }
@@ -283,19 +283,21 @@ img {
   letter-spacing: 0.06em;
 }
 
-.button, .button_order, .navi-button, .sign-up-button {
+.button, .button__order, .button__menu, .button__sign-up {
   border: none;
   box-shadow: none;
   border-style: none;
   background-color: var(--hover-color);
+  /* ========== BUTTON in INDEX ========== */
+  /* ========== MENU BUTTON in PORTFOLIO ========== */
+  /* ========== BUTTON in FOOTER ========== */
 }
 
-.button:hover, .button_order:hover, .navi-button:hover, .sign-up-button:hover, .button:focus, .button_order:focus, .navi-button:focus, .sign-up-button:focus {
+.button:hover, .button__order:hover, .button__menu:hover, .button__sign-up:hover, .button:focus, .button__order:focus, .button__menu:focus, .button__sign-up:focus {
   cursor: pointer;
 }
 
-/* ========== BUTTON in INDEX ========== */
-.button_order {
+.button__order {
   width: 200px;
   height: 50px;
   /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
@@ -310,12 +312,7 @@ img {
   color: var(--text-color-white);
 }
 
-.button_order:hover, .button_order:focus {
-  cursor: pointer;
-}
-
-/* ========== BUTTON in PORTFOLIO ========== */
-.navi-button {
+.button__menu {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
@@ -328,16 +325,14 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navi-button:hover, .navi-button:focus {
+.button__menu:hover, .button__menu:focus {
   background-color: var(--hover-color);
   color: var(--text-color-white);
   /* shadow-middle */
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  cursor: pointer;
 }
 
-/* ========== BUTTON in FOOTER ========== */
-.sign-up-button {
+.button__sign-up {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -356,14 +351,14 @@ img {
   padding-left: 42px;
 }
 
-.sign-up-button-icon {
+.button__sign-up_icon {
   margin-left: 24px;
   margin-right: 28px;
   fill: var(--backgroung-color-section);
 }
 
 /* ========== LOGO ========== */
-.logo {
+.logo, .logo__footer {
   font-family: var(--secondary-font);
   font-weight: 700;
   font-size: 26px;
@@ -387,7 +382,7 @@ img {
 
 /* ========== END LOGO ========== */
 /* ========== BLOK LISTY ========== */
-.list, .navigation-list, .social-media-list, .footer-social-media-list, .section-hero_list, .discription-list, .about-us__list, .section-our-team__list, .section-our-clients-list, .adress-list {
+.list, .contact-list, .navigation-list, .social-media-list, .footer-social-media-list, .section-hero_list, .discription-list, .about-us__list, .section-our-team__list, .section-our-clients-list, .address-list, .categories-list, .categories-pictures-list {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -396,15 +391,10 @@ img {
 
 /* ========== END USTAWIEŃ BLOKU LISTY ========== */
 /* ========== KONTAKT w MENU STRONY ========== */
-.contact-list,
-.contact-list__item {
+.contact-list {
   display: flex;
   align-items: center;
   fill: var(--text-color-grey);
-}
-
-.contact-list > li:not(:last-child) {
-  margin-right: 50px;
 }
 
 .contact-list__link {
@@ -427,6 +417,10 @@ img {
 
 .contact-list__icon {
   margin-right: 10px;
+}
+
+.contact-list > li:not(:last-child) {
+  margin-right: 50px;
 }
 
 /* ========== END KONTAKTU w MENU STRONYY ========== */
@@ -752,32 +746,36 @@ img {
   background-color: var(--background-color-footer);
 }
 
-.adress {
-  margin-top: 20px;
-}
-
-.adress-list {
+.address-list {
   display: flex;
   flex-direction: column;
-  justify-items: center;
+  align-items: flex-start;
+  padding-top: 20px;
 }
 
-.adress-list__item {
+.address-list__item {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.714;
   letter-spacing: 0.03em;
 }
 
-.adress_map {
+.address-list__link {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address-list__link_map {
   color: var(--text-color-white);
 }
 
-.adress_mail,
-.adress_tel {
+.address-list__link_mail, .address-list__link_tel {
   display: block;
   color: rgba(255, 255, 255, 0.6);
   padding-top: 9px;
+}
+
+.address-list__link:hover, .address-list__link:focus {
+  color: var(--hover-color);
 }
 
 .call-to-action {
@@ -791,21 +789,13 @@ img {
   color: var(--backgroung-color-menu);
 }
 
-.adress__link {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.adress__link:hover, .adress__link:focus {
-  color: var(--hover-color);
-}
-
 .footer-newsletter {
   display: flex;
   flex-direction: column;
   margin-left: 78px;
 }
 
-.footer-newsletter-title {
+.footer-newsletter__title {
   margin-bottom: 20px;
   font-weight: 700;
   text-transform: uppercase;
@@ -815,11 +805,11 @@ img {
   color: var(--backgroung-color-menu);
 }
 
-.footer-newsletter-form-container {
+.footer-newsletter__container {
   display: flex;
 }
 
-.footer-newsletter-input {
+.footer-newsletter__input {
   width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -835,14 +825,14 @@ img {
   background-color: var(--background-color-footer);
 }
 
-.footer-newsletter-input:hover, .footer-newsletter-input:focus {
+.footer-newsletter__input:hover, .footer-newsletter__input:focus {
   color: var(--text-color-white);
   cursor: pointer;
 }
 
 /* ========== END FOOTER ========== */
 /* ========== WEBSITE: PORTFOLIO ========== */
-/* ========== SECTION CATEGORIES ========== */
+/* ========== SECTION CATEGORIES + PICTURES ========== */
 .menu {
   margin-bottom: 26px;
 }
@@ -862,27 +852,32 @@ img {
   justify-content: space-between;
 }
 
-.categories-pictures-item {
+.categories-pictures-list__item {
   border: 0px solid #eeeeee;
   margin-top: 30px;
   max-width: 370px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.categories-pictures-item:hover, .categories-pictures-item:focus {
+.categories-pictures-list__item:hover, .categories-pictures-list__item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.categories-pictures-img {
+.categories-pictures-list__box {
+  position: relative;
+  overflow: hidden;
+}
+
+.categories-pictures-list__img {
   border: 0px solid #eeeeee;
 }
 
-.categories-discription {
+.categories-pictures-list__discription {
   border: 1px solid #eeeeee;
   border-top: 0px solid #eeeeee;
 }
 
-.categories-pictures-name {
+.categories-pictures-list__discription_name {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -891,7 +886,7 @@ img {
   padding-top: 20px;
 }
 
-.categories-pictures-p {
+.categories-pictures-list__discription_p {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.875;
@@ -900,11 +895,6 @@ img {
   margin-top: 4px;
   margin-bottom: 20px;
   color: var(--text-color-grey);
-}
-
-.categories-pictures-box {
-  position: relative;
-  overflow: hidden;
 }
 
 .categories-pictures-overlay {
@@ -921,20 +911,20 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.categories-pictures-item .categories-pictures-overlay {
+.categories-pictures-overlay_p {
+  font-size: 18px;
+  line-height: 1.556;
+  color: var(--text-color-white);
+}
+
+.categories-pictures-list__item .categories-pictures-overlay {
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.categories-pictures-box:hover .categories-pictures-overlay {
+.categories-pictures-list__box:hover .categories-pictures-overlay {
   transform: translateY(0);
-}
-
-.categories-pictures-overlay-p {
-  font-size: 18px;
-  line-height: 1.556;
-  color: var(--text-color-white);
 }
 
 /* ========== END CATEGORIES SECTION ========== */

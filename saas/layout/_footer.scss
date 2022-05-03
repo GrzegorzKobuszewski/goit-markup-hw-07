@@ -7,15 +7,12 @@
     background-color: var(--background-color-footer);
 }
 
-.adress {
-    margin-top: 20px;
-}
-
-.adress-list {
+.address-list {
     @extend .list;
     display: flex;
     flex-direction: column;
-    justify-items: center;
+    align-items: flex-start;
+    padding-top: 20px;
     
     &__item {
         font-weight: 400;
@@ -23,17 +20,27 @@
         line-height: 1.714;
         letter-spacing: 0.03em;
     }
-}
 
-.adress_map {
-    color: var(--text-color-white);
-}
+    &__link {
+        @extend .link;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+        &_map {
+            color: var(--text-color-white);
+        }
 
-.adress_mail,
-.adress_tel {
-    display: block;
-    color: rgba(255, 255, 255, 0.6);
-    padding-top: 9px;
+        &_mail,
+        &_tel {
+            display: block;
+            color: rgba(255, 255, 255, 0.6);
+            padding-top: 9px;
+        }
+
+        &:hover,
+        &:focus {
+        color: var(--hover-color);
+        }
+    }
 }
 
 .call-to-action {
@@ -47,22 +54,13 @@
     color: var(--backgroung-color-menu)
 }
 
-.adress__link {
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover,
-    &:focus {
-        color: var(--hover-color);
-    }
-}
-
 .footer-newsletter {
     display: flex;
     flex-direction: column;
     margin-left: 78px;
 }
 
-.footer-newsletter-title {
+.footer-newsletter__title {
     margin-bottom: 20px;
     font-weight: 700;
     text-transform: uppercase;
@@ -72,11 +70,11 @@
     color: var(--backgroung-color-menu);
 }
 
-.footer-newsletter-form-container {
+.footer-newsletter__container {
     display: flex;
 }
 
-.footer-newsletter-input {
+.footer-newsletter__input {
     width: 358px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
